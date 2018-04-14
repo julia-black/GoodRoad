@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Конструктор";
+}
+
+<h2 class="miniLogo">Создайте свой собственный маршрут!</h2>
+
+<form name="create-route" class="createRoute" method="post">
+    <input class="nameRoot" type="text" size="10" placeholder="Название маршрута">
+    <br />
+    <input class="descriptionRout" type="text" size="10" placeholder="Описание маршрута">
+    <br />
+    <button class="GoodRoadbutton addElemButton" type="button">Добавить элемент маршрута</button>
+    @*
+        <button class="GoodRoadbutton addElemButton" style="background-color:blue" type="button" onclick="document.getElementById('id01').style.display='block'">Добавить интересное место</button>
+    *@
+    <button class="GoodRoadbutton saveButton" type="submit">Сохранить маршрут</button>
+    <button class="GoodRoadbutton resetButton" type="button">Сбросить маршрут</button>
+
+    @*
+        <div id="id01" style="display:none">
+        <span class="GoodRoadbutton resetButton" onclick="this.parentElement.style.display='none'">x</span>
+        <button class="GoodRoadbutton saveButton" type="button">Выбрать на карте</button>
+
+        </div>*@
+
+</form>
+<div id="map">
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/MapConstructor.js" type="text/javascript"></script>
+}

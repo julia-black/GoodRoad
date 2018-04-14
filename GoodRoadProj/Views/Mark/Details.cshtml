@@ -1,0 +1,50 @@
+﻿@model GoodRoadProj.Models.Mark
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Mark</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Route.routeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Route.routeName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mX)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mY)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.mDescription)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.mDescription)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.markID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,29 @@
+﻿@model GoodRoadProj.Models.Route
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Route</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UserData.userName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserData.userName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.routeName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.routeName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.routeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

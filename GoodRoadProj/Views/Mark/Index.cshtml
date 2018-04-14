@@ -1,0 +1,57 @@
+﻿@model IEnumerable<GoodRoadProj.Models.Mark>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Route.routeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Route.routeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.markID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.markID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.markID })
+        </td>
+    </tr>
+}
+
+</table>
